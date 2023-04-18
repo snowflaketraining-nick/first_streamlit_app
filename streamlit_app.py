@@ -21,5 +21,7 @@ my_fruit_list = my_fruit_list.set_index("Fruit")
 fruits_selected = stl.multiselect("Pick some fruits:", list(my_fruit_list.index), ["Avocado", "Strawberries"])
 fruits_to_show = my_fruit_list.loc[fruits_selected] 
 
+stl.dataframe(fruits_to_show)
+
 # Display the table on the page.
 stl.dataframe(my_fruit_list)
